@@ -263,20 +263,250 @@ Penjelasan :
 sedangkan kalau menggunakan flex-end,konten nya akan berpindah ke kiri semua,dan jika center,konten nya akan berada ditengah,space-between akan memberi ruang pada setiap dua item yang bersebelahan,dan untuk space around,maka setiap konten akan memberi jaraknya
 &nbsp;
 
-## Algoritma dan Data Struktur
-- perbedaan antara Algoritma dan Data Structures
-- manfaat dari algoritma dan data structure
-- membuat algoritma sederhana
-- menerapkan algoritma ke dalam bahasa pemrograman
-- memahami Big O Notation
-- mempraktikkan pendekatan menyelesaikan suatu masalah untuk diselesaikan melalui program
-- menerapkan salah satu algoritma dengan JavaScript
-- menerapkan salah satu struktur data dengan JavaScript
+## Algoritma
+---
+Secara definisi `algoritma` adalah suatu urutan dari beberapa langkah logis (masuk akal) dan sistematis (terurut) yang digunakan untuk menyelesaikan masalah tertentu.
+
+- jenis2 algoritma : deskriptif, pseudocode, flowchart
+### Pseudocode
+Pseudocode adalah menuliskan algoritma dengan umumnya bahasa inggris sebelum kita implementasikan ke bahasa pemograman tertentu. Pseudocode merupakan suatu bahasa yang memungkinkan programmer untuk berpikir terhadap permasalahan yang harus dipecahkan tanpa harus memikirkan syntax dari bahasa pemrograman yang tertentu.
+
+***Membuat Algoritma sederhana***
+
+> Menghitung luas segitiga
+
+Secara deskripsi dapat ditulis sebagai :
+- membuat variabel untuk sisi alas segitiga
+- membuat variabel untuk tinggi segitiga
+- membuat variabel untuk rumus luas segitiga 
+- menampilkan variabel luas segitiga
+
+> Penulisan dengan Pseudocode :
+```
+Judul
+Program luas_segitiga
+
+Deskripsi
+var alas, tinggi;
+
+Implementasi
+
+alas ← 100;
+tinggi ← 64;
+luas_segitiga ← 1/2* alas * tinggi;
+
+print luas_segitiga;
+```
+
+```
+
+STORE "alas" with any value
+STORE "tinggi" with any value
+
+STORE "luas_segitiga" with
+CALCULATE 1/2 times "alas" times "tinggi"
+
+DISPLAY "luas_segitiga"
+```
+
+> Penulisan menggunakan JavaScript
+```
+    let alas = 3;
+    let tinggi = 6;
+    let luas_segitiga = 1/2*alas*tinggi;
+    console.log(luas_segitiga)
+
+```
+akan menghasilkan output : 9
 
 
-## Javascript Dasar
-- peran JavaScript pada web development
-- menjalankan JavaScript
-- membedakan berbagai tipe data
-- menggunakan operator
-- membedakan control flow (conditional dan looping)
+
+## JS Dasar
+---
+***Javascipt*** adalah bahasa pemrograman komputer yang dinamis. Pada umumnya Javascipt digunakan pada web browser untuk menciptakan halaman web yang menarik, interaktif serta merapkan berbagai fungsi pada halaman web.
+
+### Tipe Data pada Javascript
+
+- ***number*** : tipe data yang mengandung semua angka termasuk angka desimal.
+- ***string*** : grup karakter yang ada pada keyboard laptop/PC kita yaitu letters (huruf), number (angka), spaces (spasi), symbol, dan lainnya.
+- ***boolean*** : tipe data yang hanya mempunyai 2 buah nilai (TRUE dan FALSE).
+- ***null*** : tipe data yang diartikan bahwa sebuah variable/data tidak memiliki nilai.
+- ***undefined*** :tipe data yang merepresentasikan varibel/data yang tidak memiliki nilai. Tipe data undefined biasanya didapat dari hasil kesalahan program (error), kelalaian programmer, dan tidak direncanakan.
+- ***object*** : koleksi data yang saling berhubungan (related).
+
+
+### Operator Javascript
+
+1. ***Assignment Operator***
+   Assignment operator digunakan untuk menyimpan sebuah nila pada variabel. Tanda operatoin ini adalah sama denga (=)
+
+2. ***Mathematical Assignment Operator***
+   Menggunakan gabungan tanda operator matematika dan sama dengan, misal +=, -= dan lain sebagainya.
+
+3. ***Increment dan Decrement***
+   Gunakan increment atau decrement untuk menambah atau mengurangi sebesar 1 nilai. Tanda operatormya adalah ++  atau --.
+
+4. ***Arithmetic Operator***
+   Arithmetic operator adalah operator yang melibatkan operasi matematika.
+   - Tambah (+)
+   - Kuramg (-)
+   - Perkalian (*)
+   - Pembagian (/)
+   - Modulus (%)
+
+5. ***Comparison Operator***
+   Comparison operator adalah operator yang membandingkan satu nilai dengan nilai lainnya. Hasil operasi yang melibatkan comparison operator adalah antara true or false
+   
+6. ***Simbol comparison operator***
+   - Lebih kecil dari : <
+   - Lebih besar dari: >
+   - Lebih kecil atau sama dengan: <=
+   - Lebih besar atau sama dengan: >=
+   - Sama dengan: ===
+   - Tidak sama dengan: !==
+
+
+7. ***Logical Operator***
+   Logical operator biasa digunakan untuk sebuah CONDITIONAL pada pemograman. Menghasilkan nilai BOOLEAN yaitu TRUE or FALSE. Simbol dari Logical Operator adalah sebagai berikut:
+   - AND operator (&&) : AND akan menghasilkan nilai true jika kedua atau semua premis bernilai TRUE.
+   - OR operator (||) : OR akan menghasilkan nilai true jika salah satu premis mengandung nilai TRUE
+   - NOT operator (!) : NOT akan membalikkan sebuah nilai BOOLEAN. TRUE menjadi FALSE dan sebaliknya.
+
+### Conditional
+Conditional merupakan statement percabangan yang menggambarkan suatu kondisi.
+
+***IF ... ELSE IF ... STATEMENT***
+
+Perkondisan remote control (menggunakan if else). Else … If statement dapat kita gunakan jika kita mempunyai berbagai kondisi.
+
+```
+let tombol = 4;
+
+if (tombol === 1) {
+    console.log('SCTV');
+} else if (tombol === 2) {
+    console.log('Indosiar');
+}else if (tombol === 3) {
+    console.log('Trans 7');
+} else if (tombol === 4) {
+    console.log('Trans TV');
+} else {
+    console.log('Channel tidak ditemukan');
+}
+```
+
+***SWITCH CASE CONDITIONAL***
+
+Switch case :digunakan untuk mempermudah ketika pengkodisian lumayan panjang/banyak
+```
+let tombol = 11;
+switch(tombol) {
+    case 1:
+        console.log('SCTV');
+        break;
+    case 2:
+        console.log('Indosiar');
+        break;
+    case 3:
+        console.log('Trans 7');
+        break;
+    case 4:
+        console.log('Trans TV');
+        break;
+    default:
+        console.log('Channel tidak ditemukan');
+}
+```
+
+***TRURHY AND FALSY***
+
+Truthy and falsy digunakan untuk mengecek apakah variabel telah terisi namun tidak mementingkan nilainya.
+
+```
+let data = 'Data';
+
+// cek data by truthy
+if (data) {
+    console.log('Data ini tidak kosong');
+} else {
+    console.log('Data kosong');
+}
+```
+
+
+***TERNARY OPERATOR***
+
+Ternary operator - kurang cocok untuk mengecek banyak kondisi -kalau lebih dari 3 disarankan pake if else
+```
+let makan = true;
+
+makan ? console.log('sudah kenyang') : console.log('lapar');
+```
+
+
+### Looping
+
+***FOR LOOP***
+
+For loop  dapat digunakan ketika sudah tau batas awal dan akhir looping di angka berapa. Cara penulisan for :
+
+> for (initialitation; condition; post-exression) { statement }
+
+- Inisialisasi: Sebagai inisialisasi awal dari mana mulainya sebuah pengulangan. Kita memberikan nilai awal/default pada parameter ini
+- Condition: For loop akan terus berjalan selama kondisi ini terpenuhi. Selama kondisi bernilai TRUE.
+- Post-expression (Increment/Decrement): Iterasi statement yang digunakan untuk mengupdate variabel yang menjadi kontrol pada pengulangan
+
+```
+let angka = 1;
+for (angka; angka <= 10; angka++) {
+    console.log(angka);
+}
+```
+
+***WHILE LOOP***
+
+Gunakan WHILE LOOP jika kita tidak mengetahui jumlah pasti pengulangan. WHILE LOOP akan menjalankan instruksi pengulangan kondisi bernilai TRUE.
+
+> WHILE (expression) { statement }
+
+```
+let count = 1;
+while (count <= 10 ) {
+    console.log(count);
+    count +=1;
+}
+```
+
+***DO WHILE LOOP***
+
+Do while cara penulisannya mirip seperti if statement tetapi kalau if statement hanya sekali atau tidak ada perulangan, maka do while akan diulang tetapi belum menegrti hasil dan titik akhirnya.
+
+cara penulisan :
+
+```
+do {
+    statement(s);
+}while (expression;)
+```
+
+contoh penggunaan :
+Angka yang dapat dibagi dengan 2,3,4,5,6 
+```
+let i = 1
+let isKetemu = false
+
+while (!isKetemu) {
+    if (
+        i % 2 == 0 &&
+        i % 3 == 0 &&
+        i % 4 == 0 &&
+        i % 5 == 0 &&
+        i % 6 == 0 
+    ) {
+        console.log(i);
+        isKetemu = true
+    }
+
+    i++
+}
+```
